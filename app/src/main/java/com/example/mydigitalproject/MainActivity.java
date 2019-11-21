@@ -26,6 +26,15 @@ public class MainActivity extends AppCompatActivity{
             }
 
         });
+        Button button2 = findViewById(R.id.test);
+
+        button2.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                Intent intent = new Intent(v.getContext(), Main2Activity.class);
+                v.getContext().startActivity(intent);
+            }
+
+        });
 
     }
 }
