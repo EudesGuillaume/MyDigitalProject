@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">MyDigitalProject</string>
     <string name="title_activity_maps">Map</string>
+    <string name="google_maps_key">AIzaSyDw6_dop_Q6aEkgxL-vZcv4x-IeYyc2QQs</string>
 </resources>
