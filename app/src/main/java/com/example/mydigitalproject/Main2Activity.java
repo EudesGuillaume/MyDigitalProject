@@ -17,6 +17,7 @@ public class Main2Activity extends AppCompatActivity {
     DatabaseHelper mDatabaseHelper;
     private Button btnaAdd, btnViewData;
     private EditText editText;
+    private EditText editText3;
 
     private static final String TAG = "MainActivity";
 
@@ -26,6 +27,7 @@ public class Main2Activity extends AppCompatActivity {
         setContentView(R.layout.activity_main2);
 
         editText = (EditText) findViewById(R.id.editText);
+        editText3 = (EditText) findViewById(R.id.editText3);
         btnaAdd = (Button) findViewById(R.id.adddata);
         btnViewData = (Button) findViewById(R.id.viewdata);
         mDatabaseHelper = new DatabaseHelper(this);
@@ -34,9 +36,12 @@ public class Main2Activity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 String newEntry = editText.getText().toString();
-                if(editText.length() != 0){
+                String newEntry1 = editText3.getText().toString();
+                if(editText.length() != 0 && editText3.length() != 0){
                     AddData(newEntry);
+                    AddData(newEntry1);
                     editText.setText("");
+                    editText3.setText("");
                 }else{
                     toastMessage("you must put something in the text filed");
                 }
