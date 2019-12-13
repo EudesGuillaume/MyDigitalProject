@@ -22,13 +22,8 @@ public class SplashScreen extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash_screen);
 
-        ImageView logo = (ImageView) findViewById(R.id.logo);
 
-        Animation fadeOut = new AlphaAnimation(1, 0);  // the 1, 0 here notifies that we want the opacity to go from opaque (1) to transparent (0)
-        fadeOut.setInterpolator(new AccelerateInterpolator());
-        fadeOut.setDuration(1000); // Fadeout duration should be 1000 milli seconds
 
-        logo.setAnimation(fadeOut);
 
 
         /* New Handler to start the Menu-Activity
@@ -37,6 +32,13 @@ public class SplashScreen extends AppCompatActivity {
             @Override
             public void run() {
                 /* Create an Intent that will start the Menu-Activity. */
+                ImageView logo = (ImageView) findViewById(R.id.logo);
+
+                Animation fadeOut = new AlphaAnimation(1, 0);  // the 1, 0 here notifies that we want the opacity to go from opaque (1) to transparent (0)
+                fadeOut.setInterpolator(new AccelerateInterpolator());
+                fadeOut.setDuration(1000); // Fadeout duration should be 1000 milli seconds
+
+                logo.setAnimation(fadeOut);
                 Intent mainIntent = new Intent(SplashScreen.this,MainActivity.class);
                 SplashScreen.this.startActivity(mainIntent);
                 SplashScreen.this.finish();
