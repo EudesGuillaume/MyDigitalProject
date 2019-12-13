@@ -2,7 +2,6 @@ package com.example.mydigitalproject;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -24,7 +23,7 @@ public class Main2Activity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main2);
+        setContentView(R.layout.connexion);
 
         editText = (EditText) findViewById(R.id.editText);
         editText3 = (EditText) findViewById(R.id.editText3);
