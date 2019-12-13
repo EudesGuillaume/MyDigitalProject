@@ -26,7 +26,6 @@ public class SplashScreen extends AppCompatActivity {
 
         Animation fadeOut = new AlphaAnimation(1, 0);  // the 1, 0 here notifies that we want the opacity to go from opaque (1) to transparent (0)
         fadeOut.setInterpolator(new AccelerateInterpolator());
-        fadeOut.setStartOffset(500); // Start fading out after 500 milli seconds
         fadeOut.setDuration(1000); // Fadeout duration should be 1000 milli seconds
 
         logo.setAnimation(fadeOut);
